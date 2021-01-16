@@ -1,0 +1,30 @@
+<div class="container">
+    <div class=" p-3 bg-white rounded shadow-sm">
+        <div class="d-flex align-items-center p-3 my-3 text-white bg-dark rounded shadow-sm">
+            <h4 class="title mt-3 mx-auto"> <span class="fas fa-list-ul">  </span> Personas</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <th class="text-center">Identificación</th>
+                    <th class="text-center">Nombre(s)</th>
+                    <th class="text-center">Apellido(s)</th>
+                    <th class="text-center">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let persona of personas" class="text-center">
+                        <td>{{ persona.idPerson }}</td>
+                        <td>{{ persona.firstName}}</td>
+                        <td>{{ persona.lastName }}</td>
+                        <td>
+                            <button (click)="Consultar(persona)" class="btn btn-primary"> <span class="fas fa-search"></span> Detalles</button>
+                            <button (click)="Editar(persona)" class="btn btn-warning" style="margin-left: 5px;"><span class="fas fa-user-edit"></span> Editar</button>
+                            <button (click)="Eliminar(persona)" class="btn btn-danger" style="margin-left: 5px;"> <span class="fas fa-user-times"></span> Eliminar</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

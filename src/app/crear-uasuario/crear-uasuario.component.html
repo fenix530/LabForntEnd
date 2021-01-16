@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="p-3 bg-white rounded shadow-sm">
+        <div class="d-flex align-items-center p-3 my-3 text-white bg-dark rounded shadow-sm">
+            <h4 class="title mt-3 mx-auto"><span class="fas fa-user-plus"></span> Crear Persona</h4>
+        </div>        
+        <div class="row mt-3">
+            <div class="col-md">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre(s)</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.firstName" name="firstName" id="nombre" placeholder="Ingrese Nombres" >
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Apellido(s)</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.lastName" name="lastName" id="apellido" placeholder="Ingrese Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Correo Electrónico</label>
+                        <input name="fecha" required="required" class="form-control" [(ngModel)]="persona.email" name="email" type="email" id="correo" placeholder="Ingrese Correo Electrónico"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Dirección</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.homeAddress" name="homeAddress" id="direccion" placeholder="Ingrese Dirección">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Salario</label>
+                        <input required="required" class="form-control" type="number" [(ngModel)]="persona.baseSalary" name="baseSalary" id="salario" placeholder="Ingrese Salario">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Fecha Ingreso</label>
+                        <input required="required" class="form-control" type="date" [(ngModel)]="persona.attachmentDate" name="attachmentDate" id="salario" placeholder="Ingrese Fecha de ingerso a la empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Dependencia</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.dependency" name="dependency" id="Dependencia" placeholder="Ingrese Dependencia">  
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Oficina</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.office" name="office" id="Oficina" placeholder="Ingrese numero de Oficina">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Rol</label>
+                        <input type="text" required="required" class="form-control" [(ngModel)]="persona.role" name="role" id="role" placeholder="Ingrese Rol">
+                    </div>
+                    <button (click)="Guardar()" type="submit" class="btn btn-primary">Crear Persona</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
