@@ -13,7 +13,7 @@ export class ServiceService {
   urlG='http://localhost:8089/empleado/save';
   urlC='http://localhost:8089/empleado/list';
   urlU='http://localhost:8089/empleado/update';
-  urlD='http://localhost:8089/empleado/delete;';
+  urlD='http://localhost:8089/empleado/delete';
   urlV='http://localhost:8089/empleado/increase';
 
   getPersonas(){
@@ -37,8 +37,8 @@ export class ServiceService {
   }
   msg:string | undefined;
 
-  ActaulizarSalario(persona:Persona){
-    return this.http.put<any>(this.urlV+"/"+persona.idPerson,persona);
+  ActaulizarSalario(id:number){
+    return this.http.put<any>(this.urlV+"/"+id,"");
   }
 }
 

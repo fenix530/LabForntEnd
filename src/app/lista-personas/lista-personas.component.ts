@@ -44,13 +44,16 @@ export class ListaPersonasComponent implements OnInit {
         this.personas=this.personas?.filter(p=>p!=persona)
       });
       this.router.navigate(["listaPersonas"]);
-      this.showSuccess('la persona ha sido eliminada con exito','Persona Eliminada');
-    }
-    
+      this.showError('la persona ha sido eliminada con exito','Persona Eliminada');
+    }    
   }
 
   showSuccess(mensaje:string, titulo:string) {
     this.toastr.success(mensaje, titulo);
+  }
+
+  showError(mensaje:string, titulo:string) {
+    this.toastr.error(mensaje, titulo);
   }
 
 }
